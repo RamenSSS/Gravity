@@ -1,3 +1,5 @@
+var r;
+
 function read(item, pollid) {
     eval("mylist."+item+"(pollid).call({from: '0x0000000000000000000000000000000000000000'})").then(function result(data){r = data});
     return r;
