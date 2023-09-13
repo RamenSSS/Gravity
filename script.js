@@ -33,12 +33,12 @@ var myinstance =
         }
     ]
 
-var mylist = new new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
+mylist = new new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
 
-var cand = "candidates";
-var remVot = "remainingVotes";
-var totVot = "totalVotes";
-var candVot = "votesPerCandidates";
+cand = "candidates";
+remVot = "remainingVotes";
+totVot = "totalVotes";
+candVot = "votesPerCandidates";
 
 function test() {
     console.log(read(candVot,'80'));
