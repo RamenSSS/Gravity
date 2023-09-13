@@ -32,7 +32,7 @@ var myinstance =
         }
     ]
 
-var mylist = new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
+var mylist = new new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
 
 var cand = "candidates";
 var remVote = "remainingVotes";
