@@ -4,7 +4,12 @@ function read(item, pollid) {
 }
 // pollid : String
 
-var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950'
+function test() {
+    console.log(read(candVot,'80'));
+    console.log(read(remVot,'75'));
+}
+
+var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950';
 var myinstance = [
         {
             "inputs":[{"internalType":"uint256","name":"pollId","type":"uint256"}],
@@ -30,7 +35,7 @@ var myinstance = [
             "outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],
             "stateMutability":"view","type":"function"
         }
-    ]
+    ];
 
 mylist = new new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
 
@@ -38,10 +43,5 @@ cand = "candidates";
 remVot = "remainingVotes";
 totVot = "totalVotes";
 candVot = "votesPerCandidates";
-
-function test() {
-    console.log(read(candVot,'80'));
-    console.log(read(remVot,'75'));
-}
 
 test()
