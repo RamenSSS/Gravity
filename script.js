@@ -5,8 +5,7 @@ function read(item, pollid) {
 // pollid : String
 
 var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950'
-var myinstance =
-    [
+var myinstance = [
         {
             "inputs":[{"internalType":"uint256","name":"pollId","type":"uint256"}],
              "name":"candidates",
@@ -42,5 +41,7 @@ candVot = "votesPerCandidates";
 
 function test() {
     console.log(read(candVot,'80'));
-    console.log(read(remVote,'75'));
+    console.log(read(remVot,'75'));
 }
+
+test()
