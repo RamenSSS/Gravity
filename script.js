@@ -51,7 +51,7 @@ function start() {
 }
 
 function lpush() {
-    ws = read(candVot,'80')
+    ws = read(candVot,'83')
     ws = ws[0]+','+ws[1]
     if (!(l.includes(ws))) {
         l.push(ws)
@@ -70,7 +70,7 @@ function chart(ed) {
     for (i=0; i<edl.length; i++) {
         ln.push(parseInt(edl[i])/(10**18))
     }
-    console.log("School Squad "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Prism")
+    console.log("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy")
 }
 
 // start()
