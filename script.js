@@ -1,7 +1,8 @@
 function read(item, pollid) {
-    // await new new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods.votesPerCandidates(pollid).call({from: '0x0000000000000000000000000000000000000000'})
-    new Function("mylist."+item+"(pollid).call({from: '0x0000000000000000000000000000000000000000'})")
+    eval("mylist."+item+"(pollid).call({from: '0x0000000000000000000000000000000000000000'})").then(function result(data){var r = data});
+    return r;
 }
+// pollid : String
 
 var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950'
 var myinstance =
@@ -35,6 +36,6 @@ var myinstance =
 var mylist = new new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
 
 var cand = "candidates";
-var remVote = "remainingVotes";
-var totVote = "totalVotes";
-var candVote = "votesPerCandidates";
+var remVot = "remainingVotes";
+var totVot = "totalVotes";
+var candVot = "votesPerCandidates";
