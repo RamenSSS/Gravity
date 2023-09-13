@@ -40,3 +40,37 @@ var totVot = 'totalVotes';
 var candVot = 'votesPerCandidates';
 
 var mylist = new new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
+
+function p(l) {
+    console.log(l)
+}
+
+function start() {
+    l=[]
+    intervalId = setInterval(() => lpush(), 2000);
+}
+
+function lpush() {
+    ws = read(candVot,'80')
+    ws = ws[0]+','+ws[1]
+    if (!(l.includes(ws))) {
+        l.push(ws)
+    }
+
+    chart(ws)
+}
+
+function stop() {
+    clearInterval(intervalId)
+}
+
+function chart(ed) {
+    ln=[]
+    edl = ed.split(',')
+    for (i=0; i<edl.length; i++) {
+        ln.push(parseInt(edl[i])/(10**18))
+    }
+    console.log("School Squad "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Prism")
+}
+
+// start()
