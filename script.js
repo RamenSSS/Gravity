@@ -3,8 +3,8 @@ function read(item, pollid) {
     new Function("mylist."+item+"(pollid).call({from: '0x0000000000000000000000000000000000000000'})")
 }
 
-address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950'
-myinstance =
+var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950'
+var myinstance =
     [
         {
             "inputs":[{"internalType":"uint256","name":"pollId","type":"uint256"}],
@@ -32,9 +32,9 @@ myinstance =
         }
     ]
 
-mylist = new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
+var mylist = new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
 
-cand = "candidates";
-remVote = "remainingVotes";
-totVote = "totalVotes";
-candVote = "votesPerCandidates";
+var cand = "candidates";
+var remVote = "remainingVotes";
+var totVote = "totalVotes";
+var candVote = "votesPerCandidates";
