@@ -46,13 +46,15 @@ function p(l) {
 }
 
 function start() {
+    alert('시작')
     l=[]
     intervalId = setInterval(() => lpush(), 2000);
 }
 
 function lpush() {
+    alert('1')
     ws = read(candVot,'83')
-    alert('이건가?')
+    alert('2')
     ws = ws[0]+','+ws[1]
     if (!(l.includes(ws))) {
         l.push(ws)
