@@ -64,7 +64,7 @@ function lpush() {
 function stop() {
     clearInterval(intervalId)
     for (i=0; i<l.length; i++) {
-      document.append(l[i])
+    that.insertAdjacentHTML("beforeend","<p>"+l[i]+"</p>")
     }
 }
 
@@ -78,7 +78,6 @@ function chart(ed) {
 
     that = document.getElementById('that')
     that.innerHTML = "Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy";
-    alert('test')
 }
     
 // start()
