@@ -62,6 +62,9 @@ function lpush() {
 
 function stop() {
     clearInterval(intervalId)
+    for (i=0; i<l.length; i++) {
+      document.append(l[i])
+    }
 }
 
 function chart(ed) {
@@ -70,7 +73,8 @@ function chart(ed) {
     for (i=0; i<edl.length; i++) {
         ln.push(parseInt(edl[i])/(10**18))
     }
-    console.log("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy")
+    // console.log("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy")
 }
+    document.body.append("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy");
 
 // start()
