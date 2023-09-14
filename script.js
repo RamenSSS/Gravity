@@ -76,8 +76,11 @@ function chart(ed) {
     }
     // console.log("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy")
 }
+    alert('대체')
     that = document.getElementById('that')
+    alert('어디가')
     that.append('append')
+    alert('문제인데')
     hmm = document.createElement('button')
     that.append(hmm)
     that.append("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy");
