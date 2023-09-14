@@ -1,4 +1,4 @@
-var r = '';
+var r = ['0','0'];
 
 function read(item, pollid) {
     eval("mylist."+item+"(pollid).call({from: '0x0000000000000000000000000000000000000000'})").then(function result(data){r = data});
@@ -52,6 +52,7 @@ function start() {
 
 function lpush() {
     ws = read(candVot,'83')
+    alert('이건가?')
     ws = ws[0]+','+ws[1]
     if (!(l.includes(ws))) {
         l.push(ws)
