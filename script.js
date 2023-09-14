@@ -53,9 +53,7 @@ function start() {
 
 function lpush() {
     ws = read(candVot,'83')
-    alert(ws)
     ws = ws[0]+','+ws[1]
-    alert(ws)
     if (!(l.includes(ws))) {
         l.push(ws)
     }
@@ -73,15 +71,13 @@ function stop() {
 function chart(ed) {
     ln=[]
     edl = ed.split(',')
-    alert(edl)
     for (i=0; i<edl.length; i++) {
         ln.push(parseInt(edl[i])/(10**18))
     }
-    alert(ln)
     // console.log("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy")
 }
     that = document.getElementById('that')
-    document.that.append("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy");
-    document.that.append('append')
+    that.append("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy");
+    that.append('append')
 
 // start()
