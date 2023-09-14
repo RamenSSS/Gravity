@@ -46,11 +46,13 @@ function p(l) {
 }
 
 function start() {
+    alert('시작')
     l=[]
     intervalId = setInterval(() => lpush(), 2000);
 }
 
 function lpush() {
+    alert('lpush')
     ws = read(candVot,'83')
     ws = ws[0]+','+ws[1]
     if (!(l.includes(ws))) {
@@ -76,5 +78,6 @@ function chart(ed) {
     // console.log("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy")
 }
     document.body.append("Engineered "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Dreamy");
+    document.body.append('append')
 
 // start()
