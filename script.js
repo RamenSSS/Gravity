@@ -1,4 +1,4 @@
-var r = ['0','0'];
+var r = ['0','0','0','0'];
 
 function read(item, pollid) {
     eval("mylist."+item+"(pollid).call({from: '0x0000000000000000000000000000000000000000'})").then(function result(data){r = data});
@@ -66,7 +66,7 @@ function lpush() {
 function stop() {
     clearInterval(intervalId)
     for (i=0; i<l.length; i++) {
-    $('#that').append("beforeend","<p>"+l[i]+"</p>")
+    $('#that').append("<p>"+l[i]+"</p>")
     }
 }
 
