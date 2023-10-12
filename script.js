@@ -80,10 +80,10 @@ function chart(ed) {
 
     //that.innerHTML = "School Sqaud "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Engineered";
     $('#that').empty();
-    $('#that').append("■".repeat(Math.round(ln[0]/400))+" "+Math.round(ln[0])+" Air Force One");
-    $('#that').append("■".repeat(Math.round(ln[1]/400))+" "+Math.round(ln[1])+" Je Ne Sais Quoi");
-    $('#that').append("■".repeat(Math.round(ln[2]/400))+" "+Math.round(ln[2])+" Sweet Crazy Love");
-    $('#that').append("■".repeat(Math.round(ln[3]/400))+" "+Math.round(ln[3])+" Girl Front");
+    $('#that').append("<p>"+"■".repeat(Math.round(ln[0]/400))+" "+Math.round(ln[0])+" Air Force One"+"</p>");
+    $('#that').append("<p>"+"■".repeat(Math.round(ln[1]/400))+" "+Math.round(ln[1])+" Je Ne Sais Quoi"+"</p>");
+    $('#that').append("<p>"+"■".repeat(Math.round(ln[2]/400))+" "+Math.round(ln[2])+" Sweet Crazy Love"+"</p>");
+    $('#that').append("<p>"+"■".repeat(Math.round(ln[3]/400))+" "+Math.round(ln[3])+" Girl Front"+"</p>");
 }
     
 // start()
