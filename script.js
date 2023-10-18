@@ -33,6 +33,13 @@ var myinstance = [
             "name":"votesPerCandidates",
             "outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],
             "stateMutability":"view","type":"function"
+        },
+        {
+            "inputs":[{"internalType":"uint256","name":"pollId","type":"uint256"}],
+            "name":"votes",
+            "outputs":[{"components":[{"internalType":"uint256","name":"comoAmount","type":"uint256"},{"internalType":"bytes32","name":"hash","type":"bytes32"}],
+                        "internalType":"struct Governor.CommitData[]","name":"","type":"tuple[]"}],
+            "stateMutability":"view","type":"function"
         }
     ];
 
@@ -40,6 +47,7 @@ var cand = 'candidates';
 var remVot = 'remainingVotes';
 var totVot = 'totalVotes';
 var candVot = 'votesPerCandidates';
+var listVot = 'votes';
 
 var mylist = new new Web3Eth(new Web3HttpProvider("https://polygon-rpc.com")).Contract(myinstance,address).methods;
 
@@ -85,5 +93,22 @@ function chart(ed) {
     $('#that').append("<p>"+"■".repeat(Math.round(ln[2]/400))+" "+Math.round(ln[2])+" Badge War"+"</p>");
     //후보당 2만~2.5만 정도 득표할 때 사용하기 좋은 상태.
 }
-    
+
+function topRank() {
+    var rawVoteList = read(listVot,pollid);
+    var voteList = [];
+
+    for (i=0;i<rawVoteList.length;i++) {
+        var como = parseInt(rawVoteList[i][0])/(10**18);
+        if (como > 9) {
+            voteList.push([como,i])
+        }
+    }
+    voteList.sort(function(a, b) {
+        return b[0] - a[0];
+    })
+    for (i=0; i<voteList.length; i++) {
+        $('#that').append("<p>"+voteList[i][0]+"<span> "+rawVoteList[voteList[i][1]][1]+"</p>")
+    }
+}
 // start()
