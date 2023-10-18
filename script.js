@@ -1,4 +1,4 @@
-var r = ['0','0','0','0'];
+var r = ['0','0','0'];
 
 function read(item, pollid) {
     eval("mylist."+item+"(pollid).call({from: '0x0000000000000000000000000000000000000000'})").then(function result(data){r = data});
@@ -6,9 +6,9 @@ function read(item, pollid) {
 }
 // pollid : String
 
-//var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950';
-var address = '0x8466e6e218f0fe438ac8f403f684451d20e59ee3';
-var pollid = '3'
+var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950';
+//var address = '0x8466e6e218f0fe438ac8f403f684451d20e59ee3';
+var pollid = '85'
 var myinstance = [
         {
             "inputs":[{"internalType":"uint256","name":"pollId","type":"uint256"}],
@@ -55,7 +55,7 @@ function start() {
 
 function lpush() {
     ws = read(candVot,pollid)
-    ws = ws[0]+','+ws[1]+','+ws[2]+','+ws[3]
+    ws = ws[0]+','+ws[1]+','+ws[2]
     if (!(l.includes(ws))) {
         l.push(ws)
     }
@@ -80,10 +80,10 @@ function chart(ed) {
 
     //that.innerHTML = "School Sqaud "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Engineered";
     $('#that').empty();
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[0]/400))+" "+Math.round(ln[0])+" Air Force One"+"</p>");
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[1]/400))+" "+Math.round(ln[1])+" Je Ne Sais Quoi"+"</p>");
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[2]/400))+" "+Math.round(ln[2])+" Sweet Crazy Love"+"</p>");
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[3]/400))+" "+Math.round(ln[3])+" Girl Front"+"</p>");
+    $('#that').append("<p>"+"■".repeat(Math.round(ln[0]/400))+" "+Math.round(ln[0])+" Girl's Big Match"+"</p>");
+    $('#that').append("<p>"+"■".repeat(Math.round(ln[1]/400))+" "+Math.round(ln[1])+" Class Up"+"</p>");
+    $('#that').append("<p>"+"■".repeat(Math.round(ln[2]/400))+" "+Math.round(ln[2])+" Badge War"+"</p>");
+    //후보당 2만~2.5만 정도 득표할 때 사용하기 좋은 상태.
 }
     
 // start()
