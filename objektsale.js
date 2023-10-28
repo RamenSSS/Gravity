@@ -1,5 +1,5 @@
 function input(id) {return $('#'+id).val()}
-function sale(member) {
+async function sale(member) {
 const res = await fetch(
     `https://squid.subsquid.io/cosmo/graphql`,
                         {
