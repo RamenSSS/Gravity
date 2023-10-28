@@ -24,7 +24,7 @@ const res = await fetch(
     })
 })
 const json = await res.json()
-const data = json.data.transfersConnection
+data = json.data.transfersConnection
 
 /*for (i=0;i<100;i++) {
 var seeing=data.edges[i].node
