@@ -56,5 +56,5 @@ var ser = seeing.objekt.serial
 if (l[col]<ser) {l[col]=ser}
 }
   $('#that').empty()
-$('#that').append(l)
+$('#that').append([l['101Z'],l['102Z'],l['103Z'],l['104Z'],l['105Z'],l['106Z'],l['107Z'],l['108Z']].join())
 }
