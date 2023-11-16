@@ -1,6 +1,6 @@
 total = []
 
-function image(address) {
+async function image(address) {
   var next = 0
   var res = await fetch('https://api.cosmo.fans/objekt/v1/owned-by/'+address+'?start_after='+next)
   var data = await res.json()
