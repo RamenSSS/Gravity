@@ -6,9 +6,9 @@ function read(item, pollid) {
 }
 // pollid : String
 
-//var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950';
-var address = '0x8466e6e218f0fe438ac8f403f684451d20e59ee3';
-var pollid = '4'
+var address = '0xc3e5ad11ae2f00c740e74b81f134426a3331d950';
+//var address = '0x8466e6e218f0fe438ac8f403f684451d20e59ee3';
+var pollid = '86'
 var myinstance = [
         {
             "inputs":[{"internalType":"uint256","name":"pollId","type":"uint256"}],
@@ -88,13 +88,14 @@ function chart(ed) {
 
     //that.innerHTML = "School Sqaud "+Math.round(ln[0])+" "+"▩".repeat(Math.round(ln[0]/250))+"▦".repeat(Math.round(ln[1]/250))+" "+Math.round(ln[1])+" Engineered";
     $('#that').empty();
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[0]/400))+" "+Math.round(ln[0])+" ASTER"+"</p>");
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[1]/400))+" "+Math.round(ln[1])+" APOLLO"+"</p>");
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[2]/400))+" "+Math.round(ln[2])+" OURII"+"</p>");
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[3]/400))+" "+Math.round(ln[3])+" BEAMS"+"</p>");
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[4]/400))+" "+Math.round(ln[4])+" Bow"+"</p>");
-    $('#that').append("<p>"+"■".repeat(Math.round(ln[5]/400))+" "+Math.round(ln[5])+" Bit"+"</p>");
-    //후보당 2만~2.5만 정도 득표할 때 사용하기 좋은 상태.
+    $('#that').append("<p>"+"A : "+"■".repeat(Math.round(ln[0]/800))+" "+Math.round(ln[0])+"</p>");
+    $('#that').append("<p>"+"B : "+"■".repeat(Math.round(ln[1]/800))+" "+Math.round(ln[1])+"</p>");
+    $('#that').append("<p>"+"C : "+"■".repeat(Math.round(ln[2]/800))+" "+Math.round(ln[2])+"</p>");
+    $('#that').append("<p>"+"D : "+"■".repeat(Math.round(ln[3]/800))+" "+Math.round(ln[3])+"</p>");
+    $('#that').append("<p>"+"E : "+"■".repeat(Math.round(ln[4]/800))+" "+Math.round(ln[4])+"</p>");
+    $('#that').append("<p>"+"F : "+"■".repeat(Math.round(ln[5]/800))+" "+Math.round(ln[5])+"</p>");
+    $('#that').append("<p>"+"G : "+"■".repeat(Math.round(ln[6]/800))+" "+Math.round(ln[6])+"</p>");
+    //후보당 4만~5만 정도 득표할 때 사용하기 좋은 상태.
 }
 
 /*function topRank() {
