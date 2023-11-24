@@ -55,6 +55,14 @@ function p(l) {
     console.log(l)
 }
 
+function sum() {
+    s = 0
+    for (i=0;i<7;i++) {
+        s += ln[i]
+    }
+    return s
+}
+
 function start() {
     alert('시작')
     l=[]
@@ -95,6 +103,7 @@ function chart(ed) {
     $('#that').append("<p>"+"E : "+"■".repeat(Math.round(ln[4]/800))+" "+Math.round(ln[4])+"</p>");
     $('#that').append("<p>"+"F : "+"■".repeat(Math.round(ln[5]/800))+" "+Math.round(ln[5])+"</p>");
     $('#that').append("<p>"+"G : "+"■".repeat(Math.round(ln[6]/800))+" "+Math.round(ln[6])+"</p>");
+    console.log(sum())
     //후보당 4만~5만 정도 득표할 때 사용하기 좋은 상태.
 }
 
