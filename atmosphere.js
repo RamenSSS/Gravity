@@ -6,12 +6,12 @@ function feed() {
   
   fetch(`https://api.cosmo.fans/news/v1/feed?artist=tripleS&limit=1&start_after=${SA}`).then(async (res) => {
     const data = await res.json()
-    const object = data.results
+    const object = data.results[0]
 
-    var feed_text = object.body
+    feed_text = object.body
     var image_list = object.imageUrls
     $('#that').empty()
-    $('#that').append(`<p onclick="navigator.clipboard.writeText('${feed_text}')">${feed_text}</p>`)
+    $('#that').append(`<p onclick="navigator.clipboard.writeText(feed_text)">${feed_text}</p>`)
     for (i=0;i<image_list.length;i++) {
       $('#that').append(`<img src="${image_list[i]}">`)
     }
