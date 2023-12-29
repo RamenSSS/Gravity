@@ -6,13 +6,21 @@
     <script src="./script.js?v=0"></script>
     <script src="./objektsale.js?v=0"></script>
     <script src="./objektimage.js?v=0"></script>
+    <script src="./atmosphere.js?v=0"></script>
   </head>
   <body>
-    <button onclick="start()">시작</button>
-    <button onclick="stop()">종료</button>
-    <br><input type="text" id="meminput"><button onclick="sale(input('meminput'))">실행</button>
-    <br><input type="text" id="heoinput"><button onclick="heosoo(input('heoinput'))">실행</button>
-    <br><button onclick="saleresult()">실행</button>
+    <div>
+      <button onclick="start()">시작</button>
+      <button onclick="stop()">종료</button>
+    </div>
+    <div>
+      <input type="text" id="meminput"><button onclick="sale(input('meminput'))">실행</button>
+      <br><input type="text" id="heoinput"><button onclick="heosoo(input('heoinput'))">실행</button>
+      <br><button onclick="saleresult()">실행</button>
+    </div>
+    <div>
+      <input type="text" id="start_after"><button onclick="feed()">실행</button>
+    </div>
     <div><span id="that"></span></div>
   </body>
 </html>
