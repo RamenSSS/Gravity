@@ -1,3 +1,16 @@
+function comma(num) {
+  var numString = String(num)
+  if (numString.length < 4) {
+    var freg = numString
+  } else if (numString.length < 7) {
+    var freg = [numString.slice(0,-3),numString.slice(-3)].join()
+  } else {
+    var freg = [numString.slice(0,-6),numString.slice(-6,-3),numString.slice(-3)].join()
+  }
+  
+  return freg
+}
+
 function gravityResult(candList, pollResult) {
   for (item of pollResult) {
     item.push( parseInt( parseInt(item[1]) / 10**18 ) )
@@ -12,19 +25,6 @@ function gravityResult(candList, pollResult) {
       return b[2] - a[2]
     }
   )
-  
-  function comma(num) {
-    var numString = String(num)
-    if (numString.length < 4) {
-      var freg = numString
-    } else if (numString.length < 7) {
-      var freg = [numString.slice(0,-3),numString.slice(-3)].join()
-    } else {
-      var freg = [numString.slice(0,-6),numString.slice(-6,-3),numString.slice(-3)].join()
-    }
-  
-    return freg
-  }
   
   var sum = 0
   for (item of pollResult) {
@@ -58,4 +58,5 @@ ${item[5]} (${item[6]}%)}}} ||\n`
   }}}}}}}}} ||}}}`
 
   console.log(text)
+  navigator.clipboard.writeText(text)
 }
