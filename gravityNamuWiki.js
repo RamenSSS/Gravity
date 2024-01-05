@@ -55,7 +55,7 @@ ${pollResult[0][5]} (${pollResult[0][6]}%)}}} ||\n`
 ${item[5]} (${item[6]}%)}}} ||\n`
   }
   text += `||<rowbgcolor=#000><rowcolor=#fff> '''총합''' || ${comma( sum )} ||
-  }}}}}}}}} ||}}}`
+}}}}}}}}} ||}}}`
 
   console.log(text)
   navigator.clipboard.writeText(text)
